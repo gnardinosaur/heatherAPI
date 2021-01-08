@@ -1,10 +1,10 @@
-class CreateRecipeBooks < ActiveRecord::Migration[6.0]
+class CreateRecipes < ActiveRecord::Migration[6.0]
   def change
-    create_table :recipe_books do |t|
+    create_table :recipes do |t|
       t.string :title
       t.string :prep_time
       t.string :source
-      t.hstore :ingredients
+      t.string :ingredients, array:true
       t.text :steps
       t.text :notes
       t.string :tags, array: true
