@@ -1,21 +1,14 @@
 class RecipeBooksController < ApplicationController
-
+  
   def create 
-    @recipe_book = RecipeBook.create(
-      title: params[:title], 
-      prep_time: params[:prep_time],
-      source: params[:source],
-      ingredients: params[:ingredients],
-      steps: params[:steps],
-      notes: params[:notes],
-      tags: params[:tags],
-      last_prep_date: params[:last_prep_date]
-    )
+    @recipe_book = RecipeBook.create(name: params[:name])
     render json: @recipe_book
   end 
   
   def index 
-    
+    @recipe_books = RecipeBook.all
+    render json: @recipe_books
   end 
-
+  
 end
+
