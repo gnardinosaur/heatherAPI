@@ -1,7 +1,7 @@
 class RecipeBooksController < ApplicationController
   
   def create 
-    @recipe_book = RecipeBook.create(name: params[:name])
+    @recipe_book = RecipeBook.create(title: params[:title], chef_id: params[:chef_id])
     render json: @recipe_book
   end 
   

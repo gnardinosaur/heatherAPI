@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
       steps: params[:steps],
       notes: params[:notes],
       tags: params[:tags],
-      last_prep_date: params[:last_prep_date]
+      chef_id: params[:chef_id]
     )
     render json: @recipe
   end 
