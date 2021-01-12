@@ -1,3 +1,4 @@
 class Recipe < ApplicationRecord
-  has_and_belongs_to_many :recipe_books
+  belongs_to :chef
+  has_many :saved_recipes
 end
