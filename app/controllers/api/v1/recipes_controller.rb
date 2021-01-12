@@ -21,4 +21,3 @@ class RecipesController < ApplicationController
 
 end
 
-# recipe = Recipe.create(title:'nachos', prep_time:'2 minutes', ingredients: {:chips => '1 bag', :beans => '1/2 can’, :salsa => ‘a ton’}, steps: '1. blah, 2. meh, 3. eat', notes: 'yep', tags: ['mexican', 'delicious', 'fav'])
